@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: "Cocon Regular";
+  src: url("Fontes/CoconRegular.otf");
+}
+.navegador-superior{
+  background-color: #01A479;
+  width: 100vw;
+  padding: 10px 15px 10px 15px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.navegador-superior>img{
+  width: 15%;
+  display: inline-block;
+}
+.navegador-superior>ul{
+  float: right;
+  margin-top: 5px;
+}
+.navegador-superior>ul>li{
+  list-style-type: none;
+  display: inline-block;
+}
+.navegador-superior a{
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Cocon Regular";
+  font-size: 30px;
+  background-color:rgba(0, 102, 80, 0);
+  padding: 18px;
+  border-radius: 50%;
+  transition: 200ms;
+  position: relative;
+}
+.navegador-superior a:hover{
+  background-color:rgba(0, 102, 80, 1);
+  border-radius: 15px;
+}
