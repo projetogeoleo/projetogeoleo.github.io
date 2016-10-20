@@ -126,7 +126,11 @@ insert-text:focus, input:focus, select:focus {
   box-shadow: inset 0px -50px 0px rgba(0, 56, 43, 0);
   transition: all 300ms;
   cursor: pointer;
-  width: 100%;
+  width: 95%;
+  text-align: center;
+}
+.botoes-acao a{
+  text-decoration: none;
 }
 .botoes-acao:hover{
   background-color: #006650;
