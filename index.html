@@ -12,6 +12,7 @@
     }
     body, html {
       height: 100%;
+      background-color: rgba(0, 0, 0, 1);
     }
     .menu{
       position: fixed;
@@ -21,6 +22,10 @@
     .parallax {
       /* The image used */
       background-image: url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/back.jpg');
+      /*opacity: 0.5;*/
+      opacity: 0.65;
+      z-index: -10;
+      /*background-blend-mode: luminosity;*/
 
       /* Full height */
       height: 100%;
@@ -34,14 +39,18 @@
   </style>
 </head>
 <body>
-  <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu"></object>
+  <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu" style="z-index: 10"></object>
 
   <div class="parallax"></div>
 
-  <div style="height:auto;background-color:black;font-size:36px; font-family: Arial; color:#fff; padding:20px; text-transform: uppercase">
-  Scroll Up and Down this page to see the parallax scrolling effect.
-  This div is just here to enable scrolling.
-  Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  <div style="height:auto;background-color:black;font-size:16px; font-family: Arial; letter-spacing: 1px; color:#fff; padding:40px; text-transform: uppercase">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ipsum quis urna fringilla lobortis. Mauris laoreet suscipit leo, ut facilisis nulla scelerisque vitae. Aenean posuere bibendum libero at malesuada.
+  </div>
+
+  <div class="parallax" style="background-image:url('http://baixarimagens.com/wp-content/gallery/gato/baixar-imagem-de-gato.jpg')"></div>
+
+  <div style="height:auto;background-color:black;font-size:16px; font-family: Arial; letter-spacing: 1px; color:#fff; padding:40px; text-transform: uppercase">
+  Sed vulputate condimentum urna tincidunt malesuada. Nam porttitor, nunc sed finibus maximus, nisi libero mattis mi, sed molestie sapien felis imperdiet purus.
   </div>
 
   <div class="parallax" style="background-image:url('http://baixarimagens.com/wp-content/gallery/gato/baixar-imagem-de-gato.jpg')"></div>
