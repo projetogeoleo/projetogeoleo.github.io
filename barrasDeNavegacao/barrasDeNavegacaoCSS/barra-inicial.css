@@ -2,6 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
+a{
+  text-decoration: none;
+}
 /*body{
   background-image: url("Imagens/back.jpg");
   background-position: bottom;
