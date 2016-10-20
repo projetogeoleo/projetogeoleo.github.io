@@ -15,10 +15,30 @@
       width: 100%;
       height: 100vw;
     }
+    .parallax {
+      /* The image used */
+      background-image: url('http://meusanimais.com.br/wp-content/uploads/2015/05/gato.jpg');
+
+      /* Full height */
+      height: 100%;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   </style>
 </head>
 <body>
   <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu"></object>
 
+  <div class="parallax"></div>
+
+  <div style="height:auto;background-color:black;font-size:36px; font-family: Arial; color:#fff; padding:20px; text-transform: uppercase">
+  Scroll Up and Down this page to see the parallax scrolling effect.
+  This div is just here to enable scrolling.
+  Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  </div>
 </body>
 </html>
