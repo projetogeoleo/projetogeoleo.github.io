@@ -1,0 +1,82 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: "Arial Rounded";
+  src: url("../barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
+}
+
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 100vw;
+}
+
+body{
+  background-color:  rgb(247, 239, 197);
+}
+
+.form-content{
+  /*background-color: #000;*/
+  position: absolute;
+  /*margin: 160px 0px 0px 100px;*/
+  margin-left: 35%;
+  margin-top: 160px;
+}
+
+
+.form-content h1{
+  font-family: "Arial Rounded";
+  font-size: 30px;
+  color: #01A479;
+  text-transform: uppercase;
+}
+
+.insert-text{
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-bottom: 3px #01A479 solid;
+  border-right: none;
+  border-radius: 10px;
+  font-family: "Arial Rounded";
+  padding: 5px 8px 5px 8px;
+  color: #000;
+  font-size: 20px;
+  width: 310px;
+  margin: 20px 20px 20px 0px;
+  display: block;
+  /*float: left;*/
+}
+::-webkit-input-placeholder{
+  font-family: "Arial Rounded";
+  color: rgba(0, 0, 0, 0.3);
+
+}
+insert-text:focus, input:focus, select:focus {
+  outline: 0;
+}
+
+.botoes-acao{
+  background-color: #01A479;
+  border: none;
+  border-radius: 10px;
+  font-family: "Arial Rounded";
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 10px;
+  box-shadow: inset 0px -50px 0px rgba(0, 56, 43, 0);
+  transition: all 300ms;
+  cursor: pointer;
+  width: 50%;
+  float: right;
+  margin-right: 15px;
+  text-align: center;
+}
+.botoes-acao:hover{
+  background-color: #006650;
+  box-shadow: inset 0px -4px 0px rgba(0, 56, 43, 1);
+}
