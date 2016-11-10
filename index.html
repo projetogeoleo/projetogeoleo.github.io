@@ -15,7 +15,7 @@
       background-color: rgba(0, 0, 0, 1);
     }
     .menu{
-      position: fixed;
+      position: absolute;
       width: 100%;
       height: 100vw;
     }
@@ -66,11 +66,208 @@
       text-transform: uppercase;
       /*margin-top: -100px;*/
     }
+    /*COISAS DO MENUN*/
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    a{
+      text-decoration: none;
+
+    }
+    /*body{
+      background-image: url("Imagens/back.jpg");
+      background-position: bottom;
+    }*/
+
+    @font-face {
+      font-family: "Arial Rounded";
+      src: url("barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
+    }
+    @font-face {
+      font-family: "Cocon Regular";
+      src: url("barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/CoconRegular.otf");
+    }
+    .navegador-superior{
+      background-color: #01A479;
+      width: 100%;
+      padding: 10px 15px 10px 15px;
+      position: relative;
+      box-sizing: border-box;
+      overflow: visible;
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+      z-index: 10;
+    }
+    .navegador-superior>img{
+      width: 15%;
+      display: inline-block;
+    }
+    .navegador-superior>ul{
+      float: right;
+      margin-top: 5px;
+    }
+    .navegador-superior>ul>li{
+      list-style-type: none;
+      display: inline-block;
+    }
+    .link-menu{
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: "Cocon Regular";
+      font-size: 30px;
+      background-color:rgba(0, 102, 80, 0);
+      padding: 18px;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: inset 0px -100px 0px rgba(0, 102, 80, 0);
+      transition: all 300ms;
+    }
+    .link-menu:hover{
+      background-color: #006650;
+      box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
+    }
+
+    .botao-menu-ativo{
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: "Cocon Regular";
+      font-size: 30px;
+      background-color:rgba(0, 102, 80, 1);
+      padding: 18px;
+      border-radius: 15px 15px 0px 0px;
+      position: relative;
+      box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
+      transition: all 300ms;
+    }
+
+
+    #login-box{
+      position: absolute;
+      margin-top: 18px;
+      background-color: rgba(0, 102, 80, 1);
+      padding: 15px;
+      float: right;
+      margin-right: 0px;
+      font-family: "Cocon Regular";
+      color: #fff;
+      display: none;
+      /*border-radius: 15px;*/
+      animation-name: fadein;
+      animation-duration: 500ms;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes fadein {
+      0%{
+        opacity: 0;
+        margin-top: -20px;
+      }
+      100%{
+        opacity: 1;
+        margin-top: 18px;
+      }
+    }
+
+    .insert-text{
+      background-color: transparent;
+      border-top: none;
+      border-left: none;
+      border-bottom: 2px #fff solid;
+      border-right: none;
+      border-radius: 10px;
+      padding: 5px 8px 5px 8px;
+      color: #fff;
+    }
+    ::-webkit-input-placeholder{
+      font-family: "Arial Rounded";
+      color: #eee;
+
+    }
+    insert-text:focus, input:focus, select:focus {
+      outline: 0;
+    }
+
+
+    .botoes-acao-menu{
+      background-color: #01A479;
+      border: none;
+      border-radius: 10px;
+      font-family: "Arial Rounded";
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 6px;
+      box-shadow: inset 0px -50px 0px rgba(0, 56, 43, 0);
+      transition: all 300ms;
+      cursor: pointer;
+      width: 95%;
+      text-align: center;
+    }
+    .botoes-acao-menu a{
+      text-decoration: none;
+    }
+    .botoes-acao-menu:hover{
+      background-color: #006650;
+      box-shadow: inset 0px -3px 0px rgba(0, 56, 43, 1);
+    }
+
+    /*COISAS DO MENUN*/
+    /*BOTÃO CADASTRE-SE LA DE BAIXO*/
+    @font-face {
+      font-family: "Arial Rounded";
+      src: url("fonts/ArialRounded.TTF");
+    }
+    .botoes-acao{
+      background-color: #01A479;
+      border: none;
+      border-radius: 15px;
+      font-family: "Arial Rounded";
+      font-size: 25px;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 16px;
+      box-shadow: inset 0px -100px 0px rgba(0, 102, 80, 0);
+      transition: all 300ms;
+      cursor: pointer;
+      margin-left: 40%;
+      margin-top: 15px;
+      position: relative;
+    }
+    .botoes-acao:hover{
+      background-color: #006650;
+      box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
+    }
+
+    button:focus{
+      box-shadow: 0 0 0 0;
+      border: 0 none;
+      outline: 0;
+    }
 
   </style>
 </head>
 <body>
-  <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu" style="z-index: 10"></object>
+  <!-- <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu" style="z-index: 10"></object> -->
+  <nav class="navegador-superior">
+    <img src="barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png">
+    <ul>
+      <li><a href="#" class="link-menu">login</a>
+        <div id="login-box">
+          <form action="http://www.w3schools.com/html/action_page.php" method="get" name="login">
+            <input type="text" name="nomeusuario" class="insert-text" placeholder="Usuário">
+            <br><br>
+            <input type="password" name="password" class="insert-text" placeholder="Senha">
+            <br><br>
+            <a href="telas/telaInicialLogada.html">
+            <div class="botoes-acao-menu">entrar</div>
+          </a>
+          </form>
+        </div>
+      </li>
+      <li><a href="telaDeCadastro/cadastro.html" class="link-menu">cadastre-se</a></li>
+      <li><a href="#" class="link-menu">veja +</a></li>
+    </ul>
+  </nav>
 
   <div class="parallax"></div>
 
@@ -111,9 +308,15 @@
   <span>A poluição do óleo afeta a vida marinha, dificultando as trocas gasosas que são necessárias para a respiração dos animais aquáticos e a produção de oxigênio</span>
   </div>
 
-  <div class="parallax" style="background-color:rgb(24, 28, 27); background-image:none; opacity:1;">
+  <div class="parallax" style="background-color:rgb(24, 28, 27); background-image:none; height:100%; opacity:1;">
 
   </div>
-  <div class="caixa-texto"><span style="margin-top:-300px; width:600px;">o sucesso do seu estabelecimento depende da sua conduta, doe óleo e ajude a mudar essa realidade.</span></div>
+  <div class="caixa-texto"><span style="margin-top:-300px; width:600px;">o sucesso do seu estabelecimento depende da sua conduta, doe óleo e ajude a mudar essa realidade.</span>
+    <a href="telaDeCadastro/cadastro.html"><button class="botoes-acao">
+      cadastre-se
+    </button></a>
+  </div>
+
+<script src="barrasDeNavegacao/JS/login.js" type="text/javascript"></script>
 </body>
 </html>

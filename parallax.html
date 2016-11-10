@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  .tudo
+
+  .parallax {
+    /* The image used */
+    background-image: url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/back.jpg');
+    /*opacity: 0.5;*/
+    opacity: 0.65;
+    z-index: -10;
+    /*background-blend-mode: luminosity;*/
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .caixa-texto{
+    height:auto;
+    background-color:rgb(24, 28, 27);
+    padding:50px;
+    margin-top: -100px;
+    z-index:1;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "Arial Rounded";
+    src: url("barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
+  }
+  .caixa-texto span{
+    width: 1000px;
+    /*background-color: red;*/
+    margin: auto;
+    line-height: 30px;
+    display: block;
+    overflow: hidden;
+    font-size:17px;
+    font-family: "Arial Rounded";
+    /*letter-spacing: 1px;*/
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+    /*margin-top: -100px;*/
+  }
+
+  /*BOTÃO CADASTRE-SE LA DE BAIXO*/
+  @font-face {
+    font-family: "Arial Rounded";
+    src: url("fonts/ArialRounded.TTF");
+  }
+  .botoes-acao{
+    background-color: #01A479;
+    border: none;
+    border-radius: 15px;
+    font-family: "Arial Rounded";
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 16px;
+    box-shadow: inset 0px -100px 0px rgba(0, 102, 80, 0);
+    transition: all 300ms;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 15px;
+    position: relative;
+  }
+  .botoes-acao:hover{
+    background-color: #006650;
+    box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
+  }
+
+  button:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="parallax"></div>
+
+  <div class="caixa-texto">
+  <span>A cidade de Quixadá é um pólo universitário, e recebe estudantes de diversas cidades, os quais se alimentam constantemente de refeições rápidas, e isso acontece principalmente nas lanchonetes</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/back2.jpg')"></div>
+
+  <div class="caixa-texto">
+  <span>Na cidade existem em média de 300 estabelecimentos que fornecem esse tipo de serviço diariamente para suprirem a necessidade dessa demanda</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/fritando.png')"></div>
+
+  <div class="caixa-texto">
+  <span>Esses estabelecimentos produzem em média 12l de óleo por dia, que são usados para fritar alimentos como: coxinha, pastel, batata-frita dentre outros</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/jogandooleo.png')"></div>
+
+  <div class="caixa-texto">
+  <span>Geralmente os resíduos desses óleos são despejados em ralos de pia chegando à rede de esgoto</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/vazando.png')"></div>
+  <div class="caixa-texto">
+  <span>O óleo nos canos, causa entupimentos, o que aumenta a pressão interna e ocasiona rachaduras e vazamentos na rede de esgoto</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/derramando.png')"></div>
+  <div class="caixa-texto">
+  <span>Parte do óleo que não vaza passa pelos encanamentos até chegar aos rios, poluindo suas águas</span>
+  </div>
+
+  <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/morrendo.png')"></div>
+  <div class="caixa-texto">
+  <span>A poluição do óleo afeta a vida marinha, dificultando as trocas gasosas que são necessárias para a respiração dos animais aquáticos e a produção de oxigênio</span>
+  </div>
+
+  <div class="parallax" style="background-color:rgb(24, 28, 27); background-image:none; height:100%; opacity:1;">
+
+  </div>
+  <div class="caixa-texto"><span style="margin-top:-300px; width:600px;">o sucesso do seu estabelecimento depende da sua conduta, doe óleo e ajude a mudar essa realidade.</span>
+    <a href="telaDeCadastro/cadastro.html"><button class="botoes-acao">
+      cadastre-se
+    </button></a>
+  </div>
+</body>
+</html>

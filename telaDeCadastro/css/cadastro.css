@@ -21,7 +21,7 @@ body{
 .form-content, .form-content-part2{
   /*background-color: #000;*/
   position: absolute;
-  margin: 160px 0px 0px 100px;
+  margin: 13% 30%;
 }
 
 .form-content-part2{
@@ -33,6 +33,7 @@ body{
   font-size: 30px;
   color: #01A479;
   text-transform: uppercase;
+  /*text-align: center;*/
 }
 
 .insert-text{
@@ -46,8 +47,9 @@ body{
   color: #000;
   font-size: 20px;
   width: 450px;
-  margin: 20px 20px 20px 0px;
+  margin: 20px 0px 20px 0px;
   display: block;
+  font-family: "Arial Rounded";
   /*float: left;*/
 }
 ::-webkit-input-placeholder{
@@ -71,22 +73,22 @@ insert-text:focus, input:focus, select:focus {
   box-shadow: inset 0px -50px 0px rgba(0, 56, 43, 0);
   transition: all 300ms;
   cursor: pointer;
-  width: 50%;
-  float: right;
-  margin-right: 15px;
+  width: 96%;
+  /*float: right;*/
+  /*margin-right: 15px;*/
   text-align: center;
 }
 .botoes-acao-pt2{
   float: right;
   margin-top: 20px;
-  width: 30%;
-  margin-right: 240px;
+  width: 38%;
+  margin-right: 75px;
 }
-.botoes-acao:after{
+/*.botoes-acao:after{
   content: ">";
   float: right;
   margin-right: 20px;
-}
+}*/
 
 .botoes-acao:hover, .botoes-acao-pt2:hover, .botoes-acao-voltar:hover{
   background-color: #006650;
@@ -94,8 +96,16 @@ insert-text:focus, input:focus, select:focus {
 }
 
 .botoes-acao-voltar{
-  width: 30%;
+  width: 38%;
   float: left;
   margin-top: 20px;
   position: absolute;
+}
+
+.form-content-part2 span{
+  font-family: arial;
+  font-size: 13px;
+}
+.form-content-part2 a{
+  color: black;
 }
