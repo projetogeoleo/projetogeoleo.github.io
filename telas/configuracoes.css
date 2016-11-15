@@ -47,3 +47,15 @@ body{
   background-color: #006650;
   box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
 }
+
+.infos-perfil{
+  width: 450px;
+  height: 400px;
+  padding: 30px;
+  background-color: #fff;
+  margin: 100px;
+}
+
+.infos-perfil img{
+  width: 100px;
+}
