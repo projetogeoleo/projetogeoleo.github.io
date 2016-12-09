@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="telaLogada.css" type="text/css">
-  <title>Lanches Gostosos</title>
+  <link href="font-awesome.min.css" type="text/css" rel="stylesheet">
+  <title></title>
 </head>
 <body>
   <!-- <object type="text/html" data="../barrasDeNavegacao/barra-logada.html" class="menu"></object> -->
@@ -13,7 +14,7 @@
     <img src="../barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png">
     <ul>
       <li><a href="../telas/telaLogada.html" class="link-menu">agendamentos</a></li>
-      <li><a href="#" class="link-menu">configurações</a></li>
+      <li><a href="configuracoes.html" class="link-menu">configurações</a></li>
       <li><a href="../index.html" class="link-menu">sair</a></li>
     </ul>
   </nav>
@@ -37,9 +38,9 @@
   <div class="tabela">
     <table>
       <tr>
-        <th>Data</th>
+        <!-- <th>Data</th>
         <th>Turno</th>
-        <th>Quantidade</th>
+        <th>Quantidade</th> -->
         <!-- <th></th> -->
       </tr>
     </table>
@@ -51,15 +52,15 @@
       <h1>Sobre nós</h1>
       Fundada em 2016, a EcoTech tem como objetivo unir tecnologia e design afim de
       tentar minimizar os impactos humanos no meio ambiente<br>
-      <a href="#"><img src="../imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a>
+      <a href="#"><img src="../imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a>
     </div>
     <div class="divisor"></div>
     <div class="ala">
       <h1>Contatos</h1>
-      <a href="#"><img src="../imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a><br>
-      <a href="#"><img src="../imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> (88) 3414-2800</a><br>
-      <a href="#"><img src="../imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> contato@EcoTech.com</a><br>
-      <a href="#"><img src="../imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> www.EcoTech.com</a>
+      <a href="#"><img src="../imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a><br>
+      <a href="#"><img src="../imagesRodape/telefone.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> (88) 3414-2800</a><br>
+      <a href="#"><img src="../imagesRodape/email.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> contato@EcoTech.com</a><br>
+      <a href="#"><img src="../imagesRodape/site.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> www.EcoTech.com</a>
     </div>
     <div class="divisor"></div>
     <div class="ala">
@@ -76,9 +77,12 @@
     </div>
   </div>
 
-
+  <script src="../telaDeCadastro/jquery-3.1.1.js"></script>
   <script>
+  $("title").append(localStorage.getItem("nome") + " - Agendamentos");
   var tabela = document.getElementsByTagName("table")[0];
+
+  console.log(localStorage.getItem("id"));
   //ENVIA O AGENDAMENTO PARA O SERVIDOR
   function enviar(){
     event.preventDefault();
@@ -93,19 +97,20 @@
         document.forms["doacao"]["litros"].value = "";
       }
     }
-    xhttp.open("POST", "http://rest.learncode.academy/api/pi/geo1", true);
+    xhttp.open("POST", "http://rest.learncode.academy/api/pi/geo14", true);
 
     var dado = "data=" + document.forms["doacao"]["data"].value +
               "&turno=" + document.forms["doacao"]["turno"].value +
-              "&litros=" +document.forms["doacao"]["litros"].value;
+              "&litros=" +document.forms["doacao"]["litros"].value +
+              "&idDoador=" + localStorage.getItem("id");
     xhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhttp.send(dado);
-    // tabela.innerHTML="<th>Data</th>";
-    // tabela.innerHTML="<th>Turno</th>";
-    // tabela.innerHTML="<th>Quantidade</th>";
-    // // get();
+    tabela.innerHTML="";
+    get();
   }
   document.forms["doacao"].addEventListener("submit", enviar);
+
+
 
   //PEGA O AGENDAMENTO DO SERVIDOR
   function get(){
@@ -113,10 +118,11 @@
 
     xhttp.onreadystatechange = function(){
       if (this.readyState==4 && this.status==200) {
+        console.log(this.responseText);
         tratar(this.responseText);
       }
     }
-    xhttp.open("GET", "http://rest.learncode.academy/api/pi/geo1", true);
+    xhttp.open("GET", "http://rest.learncode.academy/api/pi/geo14", true);
     xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhttp.send();
   }
@@ -125,18 +131,53 @@
   //PEGA O POST EM FORMATO JSON E TRATA PARA DEIXAR SO O QUE PRECISA
   function tratar(resposta){
     var resp = JSON.parse(resposta);
+    var soma = 0;
 
     for(var i=0; i<resp.length; i++){
       if("data" in resp[i] && "turno" in resp[i] && "litros" in resp[i]){
-        adicionar(resp[i].data, resp[i].turno, resp[i].litros);
-        console.log(this.responseText);
+        if(resp[i].idDoador == localStorage.getItem("id")){
+          var litrosInt = parseInt(resp[i].litros);
+          soma+=litrosInt;
+          localStorage.setItem("vcDoou", soma);
+          console.log(soma);
+          adicionar(resp[i].data, resp[i].turno, resp[i].litros, resp[i].id, resp);
+          console.log(this.responseText);
+        }
       }
     }
   }
 
   //INSERE O AGDENDAMENTO NA TABELA
-  function adicionar(data, turno, litros){
+  function adicionar(data, turno, litros, id, resp){
     // var tabela = document.getElementsByTagName("table")[0];
+
+    var aux = document.getElementsByTagName("tr");
+    if(aux.length<=1){
+      var cabecalho = document.createElement("tr");
+
+      var cabecalhoData = document.createElement("td");
+      cabecalhoData.className="cabecalho";
+      var cabecalhoDataTexto = document.createTextNode("Data");
+      cabecalhoData.appendChild(cabecalhoDataTexto);
+
+      var cabecalhoTurno = document.createElement("td");
+      cabecalhoTurno.className="cabecalho";
+      var cabecalhoTurnoTexto = document.createTextNode("Turno");
+      cabecalhoTurno.appendChild(cabecalhoTurnoTexto);
+
+      var cabecalhoQuantidade = document.createElement("td");
+      cabecalhoQuantidade.className="cabecalho";
+      var cabecalhoQuantidadeTexto = document.createTextNode("Quantidade");
+      cabecalhoQuantidade.appendChild(cabecalhoQuantidadeTexto);
+
+      cabecalho.appendChild(cabecalhoData);
+      cabecalho.appendChild(cabecalhoTurno);
+      cabecalho.appendChild(cabecalhoQuantidade);
+
+      tabela.appendChild(cabecalho);
+
+    }
+
 
     var linha = document.createElement("tr");
 
@@ -152,40 +193,25 @@
     var litrosTexto = document.createTextNode(litros + "L");
     celulaLitros.appendChild(litrosTexto);
 
-    // var remover = document.createElement("button");
-    // var removerTexto = document.createTextNode("remover");
-    // remover.appendChild(removerTexto);
-
     var remover = document.createElement("td");
-    var removerTexto = document.createTextNode("remover")
+    remover.className="remover";
+    var removerTexto = document.createTextNode("remover");
     remover.appendChild(removerTexto);
 
-    // function removerLinha(linha){
-    //   var linhaTR = linha.parentNode.parentNode;
-    //   var linhaTable = linhaTR.parentNode;
-    //   var indexTr = linhaTR.rowIndex;
-    //   linhaTable.delete(indexTR);
-    //   alert("removeu");
-    // }
-    // remover.onclick=function(){
-    //   removerLinha(linha);
-    // }
-
-    function deleteRow(i){
-      tabela.deleteRow(i);
-    }
     remover.onclick=function(){
-      deleteRow(linha.parentNode.parentNode.rowIndex);
+      var par = $(this).parent();
+      par.remove();
     }
 
     linha.appendChild(celulaData);
     linha.appendChild(celulaTurno);
     linha.appendChild(celulaLitros);
-    // linha.appendChild(remover);
     linha.appendChild(remover);
 
     tabela.appendChild(linha);
+
   }
+
   </script>
 </body>
 </html>

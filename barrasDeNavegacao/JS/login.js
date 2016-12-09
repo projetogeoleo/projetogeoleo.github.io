@@ -7,10 +7,10 @@ var a = li.getElementsByTagName("a")[0];
 a.onclick = function(){
   if (loginboxxx.style.display=="block") {
     loginboxxx.style.display = "none";
-    document.getElementsByTagName("a")[0].className = "link-menu";
+    document.getElementsByTagName("a")[1].className = "link-menu";
   }
   else {
     loginboxxx.style.display = "block";
-    document.getElementsByTagName("a")[0].className = "botao-menu-ativo";
+    document.getElementsByTagName("a")[1].className = "botao-menu-ativo";
   }
 }

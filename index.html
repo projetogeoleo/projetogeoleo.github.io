@@ -14,6 +14,10 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 1);
     }
+    b{
+      font-size: 30px;
+      font-weight: normal;
+    }
     .menu{
       position: absolute;
       width: 100%;
@@ -39,9 +43,9 @@
 
     .caixa-texto{
       height:auto;
-      background-color:rgb(24, 28, 27);
+      background-color:#006650;
       padding:50px;
-      margin-top: -100px;
+      margin-top: -125px;
       z-index:1;
       position: absolute;
       width: 100%;
@@ -52,13 +56,13 @@
       src: url("barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
     }
     .caixa-texto span{
-      width: 1000px;
+      width: 600px;
       /*background-color: red;*/
       margin: auto;
       line-height: 30px;
       display: block;
       overflow: hidden;
-      font-size:17px;
+      font-size:20px;
       font-family: "Arial Rounded";
       /*letter-spacing: 1px;*/
       color:#fff;
@@ -98,8 +102,8 @@
       box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
       z-index: 10;
     }
-    .navegador-superior>img{
-      width: 15%;
+    .navegador-superior>img, .navegador-superior>a>img{
+      width: 198px;
       display: inline-block;
     }
     .navegador-superior>ul{
@@ -117,7 +121,7 @@
       font-size: 30px;
       background-color:rgba(0, 102, 80, 0);
       padding: 18px;
-      border-radius: 15px;
+      /*border-radius: 15px;*/
       position: relative;
       box-shadow: inset 0px -100px 0px rgba(0, 102, 80, 0);
       transition: all 300ms;
@@ -151,7 +155,7 @@
       font-family: "Cocon Regular";
       color: #fff;
       display: none;
-      /*border-radius: 15px;*/
+      border-radius: 0px 0px 15px 15px;
       animation-name: fadein;
       animation-duration: 500ms;
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -263,6 +267,7 @@
       font-family: "Cocon Regular";
       color: #fff;
       margin-bottom: 10px;
+      font-size: 25px;
     }
     .ala a{
       color: #fff;
@@ -306,9 +311,9 @@
 <body>
   <!-- <object type="text/html" data="barrasDeNavegacao/barra-inicial.html" class="menu" style="z-index: 10"></object> -->
   <nav class="navegador-superior">
-    <img src="barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png">
+    <a href="#"><img src="barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png"></a>
     <ul>
-      <li><a href="#" class="link-menu">login</a>
+      <li><a href="#" class="link-menu">entrar</a>
         <div id="login-box">
           <form action="http://www.w3schools.com/html/action_page.php" method="get" name="login">
             <input type="text" name="nomeusuario" class="insert-text" placeholder="Usuário">
@@ -322,53 +327,53 @@
         </div>
       </li>
       <li><a href="telaDeCadastro/cadastro.html" class="link-menu">cadastre-se</a></li>
-      <li><a href="#" class="link-menu">veja +</a></li>
+      <li><a href="telas/telavejamais.html" class="link-menu">saiba +</a></li>
     </ul>
   </nav>
 
   <div class="parallax"></div>
 
   <div class="caixa-texto">
-  <span>A cidade de Quixadá é um pólo universitário, e recebe estudantes de diversas cidades, os quais se alimentam constantemente de refeições rápidas, e isso acontece principalmente nas lanchonetes</span>
+  <span>A cidade de Quixadá recebe estudantes de diversas cidades, estes costumam se alimentar de refeições rápidas nas lanchonetes</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/back2.jpg')"></div>
 
   <div class="caixa-texto">
-  <span>Na cidade existem em média de 300 estabelecimentos que fornecem esse tipo de serviço diariamente para suprirem a necessidade dessa demanda</span>
+  <span>Na cidade existem mais de 300 estabelecimentos que fornecem esse serviço para suprirem a demanda</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/fritando.png')"></div>
 
   <div class="caixa-texto">
-  <span>Esses estabelecimentos produzem em média 12l de óleo por dia, que são usados para fritar alimentos como: coxinha, pastel, batata-frita dentre outros</span>
+  <span>As lanchonetes consomem, em frituras, cerca 12l de óleo por dia</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/jogandooleo.png')"></div>
 
   <div class="caixa-texto">
-  <span>Geralmente os resíduos desses óleos são despejados em ralos de pia chegando à rede de esgoto</span>
+  <span>Geralmente os resíduos desses óleos são despejados em ralos chegando à rede de esgoto</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/vazando.png')"></div>
   <div class="caixa-texto">
-  <span>O óleo nos canos, causa entupimentos, o que aumenta a pressão interna e ocasiona rachaduras e vazamentos na rede de esgoto</span>
+  <span>O óleo nos canos causa rachaduras e vazamentos na rede de esgoto</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/derramando.png')"></div>
   <div class="caixa-texto">
-  <span>Parte do óleo que não vaza passa pelos encanamentos até chegar aos rios, poluindo suas águas</span>
+  <span>o óleo que não vaza segue pelos encanamentos até chegar aos rios</span>
   </div>
 
   <div class="parallax" style="background-image:url('barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/morrendo.png')"></div>
-  <div class="caixa-texto" style="margin-top:-110px;">
-  <span>A poluição do óleo afeta a vida marinha, dificultando as trocas gasosas que são necessárias para a respiração dos animais aquáticos e a produção de oxigênio</span>
+  <div class="caixa-texto" style="margin-top:-150px;">
+  <span>o óleo nos rios afeta a vida marinha dificultando as trocas gasosas que são necessárias para a respiração dos animais aquáticos</span>
   </div>
 
-  <div class="parallax" style="background-color:rgb(24, 28, 27); background-image:none; height:100%; opacity:1;">
+  <div class="parallax" style="background-color:#006650; background-image:none; height:100%; opacity:1;">
 
   </div>
-  <div class="caixa-texto"><span style="margin-top:-300px; width:600px;">o sucesso do seu estabelecimento depende da sua conduta, doe óleo e ajude a mudar essa realidade.</span>
+  <div class="caixa-texto"><span style="margin-top:-400px;">o sucesso do seu estabelecimento depende da sua conduta, doe óleo e ajude a mudar essa realidade.</span>
     <a href="telaDeCadastro/cadastro.html"><button class="botoes-acao">
       cadastre-se
     </button></a>
@@ -378,15 +383,15 @@
       <h1>Sobre nós</h1>
       Fundada em 2016, a EcoTech tem como objetivo unir tecnologia e design afim de
       tentar minimizar os impactos humanos no meio ambiente<br>
-      <a href="#"><img src="imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a>
+      <a href="#"><img src="imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a>
     </div>
     <div class="divisor"></div>
     <div class="ala">
       <h1>Contatos</h1>
-      <a href="#"><img src="imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a><br>
-      <a href="#"><img src="imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> (88) 3414-2800</a><br>
-      <a href="#"><img src="imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> contato@EcoTech.com</a><br>
-      <a href="#"><img src="imagesRodape/fb-white.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> www.EcoTech.com</a>
+      <a href="#"><img src="imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a><br>
+      <a href="#"><img src="imagesRodape/telefone.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> (88) 3414-2800</a><br>
+      <a href="#"><img src="imagesRodape/email.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> contato@EcoTech.com</a><br>
+      <a href="#"><img src="imagesRodape/site.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> www.EcoTech.com</a>
     </div>
     <div class="divisor"></div>
     <div class="ala">

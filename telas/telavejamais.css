@@ -1,143 +1,28 @@
+body{
+  background-color: rgb(247, 239, 197);
+}
+
+/*COISAS DO MENUN*/
 *{
   margin: 0px;
   padding: 0px;
 }
-
-@font-face {
-  font-family: "Arial Rounded";
-  src: url("../../barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
-}
-
-body{
-  background-color: rgb(247, 239, 197);
-}
 a{
   text-decoration: none;
-}
-
-.menu{
-  position: fixed;
-  width: 100%;
-  height: 100vw;
-}
-.conteudo{
-  width: 100%;
-  height: 100%;
-  /*background-color: #fff;*/
-  /*text-align: center;*/
-}
-.form-content, .form-content-part2{
-  /*background-color: #000;*/
-  /*position: absolute;*/
-  width: 470px;
-  position: relative;
-  margin: auto;
-  margin-top: 100px;
-}
-
-.form-content-part2{
-  display: none;
-  margin-top: 80px;
-  margin-bottom: -18px;
-}
-
-.form-content h1, .form-content-part2 h1{
-  font-family: "Arial Rounded";
-  font-size: 30px;
-  color: #01A479;
-  text-transform: uppercase;
-  /*text-align: center;*/
-}
-
-.insert-text{
-  background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-bottom: 3px #01A479 solid;
-  border-right: none;
-  border-radius: 10px;
-  padding: 5px 8px 5px 8px;
-  color: #000;
-  font-size: 20px;
-  width: 450px;
-  margin: 20px 0px 20px 0px;
-  display: block;
-  font-family: "Arial Rounded";
-  /*float: left;*/
-}
-::-webkit-input-placeholder{
-  font-family: "Arial Rounded";
-  color: rgba(0, 0, 0, 0.3);
 
 }
-insert-text:focus, input:focus, select:focus {
-  outline: 0;
-}
-
-.botoes-acao, .botoes-acao-pt2, .botoes-acao-voltar{
-  background-color: #01A479;
-  border: none;
-  border-radius: 10px;
-  font-family: "Arial Rounded";
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 10px;
-  box-shadow: inset 0px -50px 0px rgba(0, 56, 43, 0);
-  transition: all 300ms;
-  cursor: pointer;
-  width: 450px;
-  /*position: absolute;*/
-  /*float: right;*/
-  /*margin-right: 15px;*/
-  text-align: center;
-}
-.botoes-acao-pt2{
-  /*float: left;*/
-  margin-top: 0px;
-  width: 205px;
-  float: right;
-  margin-left: 15px;
-  /*display: inline;*/
-  /*margin-right: 75px;*/
-}
-/*.botoes-acao:after{
-  content: ">";
-  float: right;
-  margin-right: 20px;
+/*body{
+  background-image: url("Imagens/back.jpg");
+  background-position: bottom;
 }*/
 
-.botoes-acao:hover, .botoes-acao-pt2:hover, .botoes-acao-voltar:hover{
-  background-color: #006650;
-  box-shadow: inset 0px -4px 0px rgba(0, 56, 43, 1);
+@font-face {
+  font-family: "Arial Rounded";
+  src: url("../barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/ArialRounded.TTF");
 }
-
-.lugarbotoes{
-  width: 470px;
-  /*background-color: #fff;*/
-}
-
-.botoes-acao-voltar{
-  width: 205px;
-  /*float: right;*/
-  /*margin-left: 6px;*/
-  /*float: left;*/
-  margin-top: 20px;
-  /*display: inline-block;*/
-  /*position: absolute;*/
-}
-
-.form-content-part2 span{
-  font-family: arial;
-  font-size: 13px;
-}
-.form-content-part2 a{
-  color: black;
-}
-
 @font-face {
   font-family: "Cocon Regular";
-  src: url("../../barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/CoconRegular.otf");
+  src: url("../barrasDeNavegacao/barrasDeNavegacaoCSS/fontes/CoconRegular.otf");
 }
 .navegador-superior{
   background-color: #01A479;
@@ -203,11 +88,24 @@ insert-text:focus, input:focus, select:focus {
   color: #fff;
   display: none;
   border-radius: 0px 0px 15px 15px;
+  /*border-radius: 15px;*/
   animation-name: fadein;
   animation-duration: 500ms;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
-.insert-text-login{
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100%{
+    opacity: 1;
+    margin-top: 18px;
+  }
+}
+
+.insert-text{
   background-color: transparent;
   border-top: none;
   border-left: none;
@@ -217,14 +115,15 @@ insert-text:focus, input:focus, select:focus {
   padding: 5px 8px 5px 8px;
   color: #fff;
 }
-.insert-text-login::-webkit-input-placeholder{
+::-webkit-input-placeholder{
   font-family: "Arial Rounded";
   color: #eee;
 
 }
-insert-text-login:focus, input:focus, select:focus {
+insert-text:focus, input:focus, select:focus {
   outline: 0;
 }
+
 
 .botoes-acao-menu{
   background-color: #01A479;
@@ -249,15 +148,98 @@ insert-text-login:focus, input:focus, select:focus {
   box-shadow: inset 0px -3px 0px rgba(0, 56, 43, 1);
 }
 
-@keyframes fadein {
-  0%{
-    opacity: 0;
-    margin-top: -20px;
-  }
-  100%{
-    opacity: 1;
-    margin-top: 18px;
-  }
+/*COISAS DO MENUN*/
+
+.conteudo{
+  /*background-color: #ccc;*/
+  width: 100%;
+  height: 50vw;
+  /*position: relative;*/
+  /*margin-top: 20px;*/
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  width: 50%;
+  height: auto;
+  /*margin: auto;*/
+  /*margin-top: 100px;*/
+  /*background: #fff;*/
+  text-align: center;
+}
+.content h1{
+  font-family: "Arial Rounded";
+  color: #01a479;
+}
+.content span{
+  margin-top: 15px;
+  font-size: 19px;
+  display: block;
+  font-family: "Arial Rounded";
+  color: #01a479;
+}
+.content img{
+  width: 300px;
+}
+.centro{
+  /*background-color: #ccc;*/
+  width: 70%;
+  height: 100vw;
+  margin: auto;
+  /*text-align: center;*/
+}
+.linhaInfo{
+  width: 100%;
+  /*background-color: red;*/
+  height: 200px;
+}
+.esquerda, .esquerdaimage{
+  width: 50%;
+  /*background-color: #000;*/
+  float: left;
+  height: 100%;
+  min-height: 200px;
+  padding: 20px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.esquerda img, .esquerdaimage img{
+  width: 150px;
+}
+.esquerdaimage{
+  text-align: right;
+  margin-right: 20px;
+}
+.direita{
+  /*background-color: #999;*/
+  width: 50%;
+  height: 100%;
+  float: right;
+  /*margin-bottom: 10px;*/
+  padding-left: 35px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  /*margin-left: 45px;*/
+  box-sizing: border-box;
+  border-left: #01A479 10px solid;
+  display: inline-block;
+  position: relative;
+  font-family: 'Arial Rounded';
+  color: #01A479;
+  font-size: 15px;
+}
+
+.linha{
+  background-color: #01A479;
+  position: absolute;
+  /*margin: 50%;*/
+  margin-left: 33%;
+  width: 10px;
+  height: 100vw;
 }
 
 .caixa-total{
@@ -265,8 +247,6 @@ insert-text-login:focus, input:focus, select:focus {
   background-color: #01A479;
   height: 300px;
   padding: 40px;
-  position: absolute;
-  margin-top: 100px;
   box-sizing: border-box;
 }
 .ala{

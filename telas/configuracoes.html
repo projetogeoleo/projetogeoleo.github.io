@@ -8,28 +8,110 @@
   <title>Document</title>
 </head>
 <body>
+
+  <div class="titulo"><div style="font-size:30px; display: inline;"><a href="telaInicialLogada.html" style="color: #006650; text-decoration: none">Ínicio ></a></div> Configurações</div>
+
   <nav class="navegador-superior">
     <img src="../barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png">
     <ul>
-      <li><a href="../telas/telaLogada.html" class="link-menu">doar</a></li>
+      <li><a href="../telas/telaLogada.html" class="link-menu">agendamentos</a></li>
       <li><a href="#" class="link-menu">configurações</a></li>
       <li><a href="#" class="link-menu">sair</a></li>
     </ul>
   </nav>
   <div class="infos-perfil">
-  <img src="https://cdn0.iconfinder.com/data/icons/people-11/512/Add_User-512.png">
+
 
   <div class="form-content">
+    <img src="https://cdn0.iconfinder.com/data/icons/people-11/512/Add_User-512.png">
     <!-- <h1>Cadastre-se</h1> -->
     <form action="http://www.w3schools.com/html/action_page.php" method="get" name="cadastro">
-      <input type="text" name="nome" class="insert-text" value="Lanches Gostosos">
-      <input type="text" name="email" class="insert-text" value="lanchesg@gmail.com">
-      <input type="text" name="nomeusuario" class="insert-text" value="lanchesg">
-      <input type="password" name="senha" class="insert-text" placeholder="Senha">
-      <input type="password" name="senha2" class="insert-text" placeholder="Confirme a senha">
-      <!-- <div class="botoes-acao">continuar</div> -->
+      <input type="text" name="nome" id="nome" class="insert-text" value="Lanches Gostosos">
+      <input type="text" name="nome" id="responsavel" class="insert-text" value="Cláudio da Silva">
+      <input type="email" name="email" id="email" class="insert-text" value="lanchesg@gmail.com">
+      <input type="text" name="adress" id="endereco" class="insert-text" value="Rua José Jucá, 527, centro" style=" width:420px">
+      <input type="text" name="email" id="telefone" class="insert-text" value="3423-0201" style=" width:420px">
+      <input type="text" name="nomeusuario" id="nomeUsuario" class="insert-text" value="lanchesg" style=" width:420px">
+      <input type="password" name="senha" id="senha" class="insert-text" placeholder="Senha" style=" width:420px">
+      <input type="password" name="senha2" id="senha2" class="insert-text" placeholder="Confirme a senha" style=" width:420px">
+      <div class="botoes-acao">cancelar</div>
+      <div class="botoes-acao">salvar</div>
+
   </form>
   </div>
   </div>
+
+  <div class="caixa-selos">
+    <div class="selo">
+      <h1>rei das <br> coxinhas</h1>
+      <img src="../selos/selocoxinha.png" alt="" />
+      <span>Parabéns! <br> você doou 15L</span>
+    </div>
+    <div class="selo">
+      <h1>o melhor pasteleiro</h1>
+      <img src="../selos/selopastel.png" alt="" />
+      <span>50L! você está cada vez melhor!</span>
+    </div>
+    <div class="selo">
+      <h1>dono da <br> chapa</h1>
+      <img src="../selos/3.png" alt="" />
+      <span>100L já doados <br> vai planeta!</span>
+    </div>
+    <div class="selo">
+      <h1>melhor <br>fritadeira</h1>
+      <img src="../selos/5.png" alt="" />
+      <span>Uau!!! 200L de óleo doados! Muito Bom!!!</span>
+    </div>
+    <div class="selo">
+      <h1>o melhor da cidade!</h1>
+      <img src="../selos/4.png" alt="" />
+      <span>Caramba 300L! Você é demais!</span>
+    </div>
+
+
+    <!-- <img src="../selos/selopastel.png" alt="" /> -->
+  </div>
+
+  <div class="caixa-total">
+    <div class="ala">
+      <h1>Sobre nós</h1>
+      Fundada em 2016, a EcoTech tem como objetivo unir tecnologia e design afim de
+      tentar minimizar os impactos humanos no meio ambiente<br>
+      <a href="#"><img src="../imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a>
+    </div>
+    <div class="divisor"></div>
+    <div class="ala">
+      <h1>Contatos</h1>
+      <a href="#"><img src="../imagesRodape/facebook.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> facebook.com/EcoTech</a><br>
+      <a href="#"><img src="../imagesRodape/telefone.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> (88) 3414-2800</a><br>
+      <a href="#"><img src="../imagesRodape/email.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> contato@EcoTech.com</a><br>
+      <a href="#"><img src="../imagesRodape/site.png" style="width: 15px; margin-top: 10px; margin-right: 10px;"> www.EcoTech.com</a>
+    </div>
+    <div class="divisor"></div>
+    <div class="ala">
+      <h1>Newsletter</h1>
+      Assine nossa newsletter para receber atualizações sobre nossos produtos e serviços por email
+      <br><input type="text" class="news" placeholder="email">
+      <input type="submit" class="enviarNews">
+    </div>
+    <div class="divisor"></div>
+    <div class="ala">
+      <h1>Apoio</h1>
+      <img src="../imagesRodape/petrobras.gif" width="150px;">
+      <img src="../imagesRodape/quixada.png" width="150px;" style="margin-top:10px">
+    </div>
+  </div>
+
+<script src="../telaDeCadastro/jquery-3.1.1.js"></script>
+<script>
+  $("#nome").val(localStorage.getItem("nome"));
+  $("#responsavel").val(localStorage.getItem("responsavel"));
+  $("#email").val(localStorage.getItem("email"));
+  $("#endereco").val(localStorage.getItem("endereco"));
+  $("#telefone").val(localStorage.getItem("telefone"));
+  $("#nomeUsuario").val(localStorage.getItem("nomeUsuario"));
+  $("#senha").val(localStorage.getItem("senha"));
+  $("#senha2").val(localStorage.getItem("senha"));
+</script>
 </body>
 </html>
