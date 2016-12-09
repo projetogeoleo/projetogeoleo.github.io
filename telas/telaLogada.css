@@ -219,8 +219,8 @@ th, td {
   overflow: visible;
   box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
-.navegador-superior>img{
-  width: 15%;
+.navegador-superior>img, .navegador-superior>a>img{
+  width: 198px;
   display: inline-block;
 }
 .navegador-superior>ul{

@@ -315,14 +315,14 @@
     <ul>
       <li><a href="#" class="link-menu">entrar</a>
         <div id="login-box">
-          <form action="http://www.w3schools.com/html/action_page.php" method="get" name="login">
-            <input type="text" name="nomeusuario" class="insert-text" placeholder="Usuário">
+          <form name="login">
+            <input type="text" name="nomeusuario" id="usuarioLogin" class="insert-text" placeholder="Usuário">
             <br><br>
-            <input type="password" name="password" class="insert-text" placeholder="Senha">
+            <input type="password" name="password" id="senhaLogin" class="insert-text" placeholder="Senha">
             <br><br>
-            <a href="telas/telaInicialLogada.html">
-            <div class="botoes-acao-menu">entrar</div>
-          </a>
+            <!-- <a href="../telas/telaInicialLogada.html"> -->
+            <div class="botoes-acao-menu" id="entrarLogin">entrar</div>
+          <!-- </a> -->
           </form>
         </div>
       </li>
@@ -411,5 +411,44 @@
 </div>
 
 <script src="barrasDeNavegacao/JS/login.js" type="text/javascript"></script>
+<script src="telaDeCadastro/jquery-3.1.1.js"></script>
+<script>
+//LOGIN
+$("#entrarLogin").click(function(){
+  var usuarioLogin = $("#usuarioLogin").val();
+  var senhaLogin = $("#senhaLogin").val();
+
+  $.ajax({
+    type: "GET",
+    url: "http://rest.learncode.academy/api/ecotech/geoleo2",
+    success: function(data){
+      console.log("pegou");
+      event.preventDefault();
+      for(var i=0; i<data.length; i++){
+        if (data[i].nomeUsuario == usuarioLogin) {
+          if (data[i].senha == senhaLogin) {
+            $("#usuarioLogin").val("");
+            $("#senhaLogin").val("");
+            window.location.href = "telas/telaInicialLogada.html";
+            localStorage.setItem("nome", data[i].nomeEstabelecimento);
+            localStorage.setItem("email", data[i].email);
+            localStorage.setItem("nomeUsuario", data[i].nomeUsuario);
+            localStorage.setItem("senha", data[i].senha);
+            localStorage.setItem("vcDoou", data[i].vcDoou);
+            localStorage.setItem("id", data[i].id);
+            localStorage.setItem("responsavel", data[i].responsavel);
+            localStorage.setItem("outro", data[i].outro);
+            localStorage.setItem("endereco", data[i].endereco);
+            localStorage.setItem("telefone", data[i].telefone);
+            localStorage.setItem("cnpj", data[i].cnpj);
+            return(window.location.href);
+          }
+        }
+      }
+      alert("Usuário ou senha incorreto")
+    }
+  })
+})
+</script>
 </body>
 </html>

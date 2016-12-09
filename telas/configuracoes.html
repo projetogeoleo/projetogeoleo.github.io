@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="configuracoes.css">
-  <title>Document</title>
+  <title></title>
 </head>
 <body>
 
-  <div class="titulo"><div style="font-size:30px; display: inline;"><a href="telaInicialLogada.html" style="color: #006650; text-decoration: none">Ínicio ></a></div> Configurações</div>
+  <div class="titulo"><div style="font-size:30px; display: inline;"><a href="telaInicialLogada.html" style="color: #006650; text-decoration: none">Início ></a></div> Configurações</div>
 
   <nav class="navegador-superior">
-    <img src="../barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png">
+    <a href="telaInicialLogada.html"><img src="../barrasDeNavegacao/barrasDeNavegacaoCSS/imagens/logo.png"></a>
     <ul>
       <li><a href="../telas/telaLogada.html" class="link-menu">agendamentos</a></li>
-      <li><a href="#" class="link-menu">configurações</a></li>
-      <li><a href="#" class="link-menu">sair</a></li>
+      <li><a href="configuracoes.html" class="link-menu">configurações</a></li>
+      <li><a href="../index.html" class="link-menu">sair</a></li>
     </ul>
   </nav>
   <div class="infos-perfil">
@@ -104,6 +104,7 @@
 
 <script src="../telaDeCadastro/jquery-3.1.1.js"></script>
 <script>
+  $("title").append(localStorage.getItem("nome") + " - Configurações");
   $("#nome").val(localStorage.getItem("nome"));
   $("#responsavel").val(localStorage.getItem("responsavel"));
   $("#email").val(localStorage.getItem("email"));
