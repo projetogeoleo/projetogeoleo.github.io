@@ -306,6 +306,26 @@
       background-color: #006650;
       box-shadow: inset 0px -5px 0px rgba(0, 56, 43, 1);
     }
+
+    .seta{
+      position: absolute;
+      width: 90%;
+      /*background-color: #000;*/
+      text-align: center;
+      margin-top: -90px;
+      animation-name: sobeDesce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .seta img{
+      width: 70px;
+      margin: auto;
+    }
+    @keyframes sobeDesce {
+      0%{top: 0px}
+      50%{top: 35px}
+      100%{top: 0px}
+    }
   </style>
 </head>
 <body>
@@ -331,9 +351,14 @@
     </ul>
   </nav>
 
+
   <div class="parallax"></div>
 
+
   <div class="caixa-texto">
+    <div class="seta">
+      <img src="seta.png" alt="">
+    </div>
   <span>A cidade de Quixadá recebe estudantes de diversas cidades, estes costumam se alimentar de refeições rápidas nas lanchonetes</span>
   </div>
 
